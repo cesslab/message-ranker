@@ -1,0 +1,25 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+Message Vote
+{% endblock %}
+
+{% block content %}
+<div class='d-flex flex-row'>
+  {% for message in messages %}
+  <div class="card mr-2">
+    <div class="card-header">
+      Message {{forloop.counter0}}
+    </div>
+    <div class="card-body">
+      {{ message }}
+    </div>
+  </div>
+  {% endfor%}
+</div>
+
+{% formfields %}
+{% next_button %}
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+Winning Message
+{% endblock %}
+
+{% block content %}
+<p>
+  Message: {{winning_message}}
+</p>
+{% next_button %}
+
+{% endblock %}
